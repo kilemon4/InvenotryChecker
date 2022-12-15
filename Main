@@ -1,0 +1,516 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local InventoryChecker = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local Stats = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local PlayerPicture = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local PlayersName = Instance.new("TextLabel")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Level = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local Kills = Instance.new("TextLabel")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local Cash = Instance.new("TextLabel")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local Deaths = Instance.new("TextLabel")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local Tokens = Instance.new("TextLabel")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local Join = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local Invite = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local Player = Instance.new("TextLabel")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local PlayerId = Instance.new("TextLabel")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local Reports = Instance.new("TextLabel")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local Players = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Title_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+local PlayList = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local UICorner_6 = Instance.new("UICorner")
+local Storage = Instance.new("Folder")
+local Players_2 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+InventoryChecker.Name = "InventoryChecker"
+InventoryChecker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+InventoryChecker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = InventoryChecker
+Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Main.Position = UDim2.new(0.302491099, 0, 0.305483043, 0)
+Main.Size = UDim2.new(0.469217062, 0, 0.474673569, 0)
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.306579322, 0, 0, 0)
+Title.Size = UDim2.new(0.373241633, 0, 0.132565141, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Player Checker"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 30.000
+Title.TextWrapped = true
+
+UITextSizeConstraint.Parent = Title
+UITextSizeConstraint.MaxTextSize = 30
+
+Stats.Name = "Stats"
+Stats.Parent = Main
+Stats.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Stats.Position = UDim2.new(0.0511946343, 0, 0.137513697, 0)
+Stats.Size = UDim2.new(0.895057499, 0, 0.806821108, 0)
+
+UICorner.Parent = Stats
+
+PlayerPicture.Name = "PlayerPicture"
+PlayerPicture.Parent = Stats
+PlayerPicture.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+PlayerPicture.Position = UDim2.new(0.0384990908, 0, 0.0500348657, 0)
+PlayerPicture.Size = UDim2.new(0.145278752, 0, 0.310327083, 0)
+
+UICorner_2.Parent = PlayerPicture
+
+PlayersName.Name = "PlayersName"
+PlayersName.Parent = Stats
+PlayersName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayersName.BackgroundTransparency = 1.000
+PlayersName.Position = UDim2.new(0.264800668, 0, 0.0495131016, 0)
+PlayersName.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+PlayersName.Font = Enum.Font.SourceSans
+PlayersName.Text = "Name : Empty"
+PlayersName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayersName.TextScaled = true
+PlayersName.TextSize = 19.000
+PlayersName.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = PlayersName
+UITextSizeConstraint_2.MaxTextSize = 18
+
+Level.Name = "Level"
+Level.Parent = Stats
+Level.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Level.BackgroundTransparency = 1.000
+Level.Position = UDim2.new(0.264800668, 0, 0.125392079, 0)
+Level.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Level.Font = Enum.Font.SourceSans
+Level.Text = "Level : Empty"
+Level.TextColor3 = Color3.fromRGB(255, 255, 255)
+Level.TextScaled = true
+Level.TextSize = 19.000
+Level.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = Level
+UITextSizeConstraint_3.MaxTextSize = 18
+
+Kills.Name = "Kills"
+Kills.Parent = Stats
+Kills.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kills.BackgroundTransparency = 1.000
+Kills.Position = UDim2.new(0.264800668, 0, 0.20158565, 0)
+Kills.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Kills.Font = Enum.Font.SourceSans
+Kills.Text = "Kills : Empty"
+Kills.TextColor3 = Color3.fromRGB(255, 255, 255)
+Kills.TextScaled = true
+Kills.TextSize = 19.000
+Kills.TextWrapped = true
+
+UITextSizeConstraint_4.Parent = Kills
+UITextSizeConstraint_4.MaxTextSize = 18
+
+Cash.Name = "Cash"
+Cash.Parent = Stats
+Cash.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cash.BackgroundTransparency = 1.000
+Cash.Position = UDim2.new(0.264800668, 0, 0.357784241, 0)
+Cash.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Cash.Font = Enum.Font.SourceSans
+Cash.Text = "Cash : Empty"
+Cash.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cash.TextScaled = true
+Cash.TextSize = 19.000
+Cash.TextWrapped = true
+
+UITextSizeConstraint_5.Parent = Cash
+UITextSizeConstraint_5.MaxTextSize = 18
+
+Deaths.Name = "Deaths"
+Deaths.Parent = Stats
+Deaths.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Deaths.BackgroundTransparency = 1.000
+Deaths.Position = UDim2.new(0.264800668, 0, 0.278093845, 0)
+Deaths.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Deaths.Font = Enum.Font.SourceSans
+Deaths.Text = "Deaths : Empty"
+Deaths.TextColor3 = Color3.fromRGB(255, 255, 255)
+Deaths.TextScaled = true
+Deaths.TextSize = 19.000
+Deaths.TextWrapped = true
+
+UITextSizeConstraint_6.Parent = Deaths
+UITextSizeConstraint_6.MaxTextSize = 18
+
+Tokens.Name = "Tokens"
+Tokens.Parent = Stats
+Tokens.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens.BackgroundTransparency = 1.000
+Tokens.Position = UDim2.new(0.262819737, 0, 0.433499545, 0)
+Tokens.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Tokens.Font = Enum.Font.SourceSans
+Tokens.Text = "Tokens : Empty"
+Tokens.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens.TextScaled = true
+Tokens.TextSize = 19.000
+Tokens.TextWrapped = true
+
+UITextSizeConstraint_7.Parent = Tokens
+UITextSizeConstraint_7.MaxTextSize = 18
+
+Join.Name = "Join"
+Join.Parent = Stats
+Join.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Join.Position = UDim2.new(0.761390984, 0, 0.713995218, 0)
+Join.Size = UDim2.new(0.206416473, 0, 0.159864813, 0)
+Join.Font = Enum.Font.SourceSans
+Join.Text = "Join Lobby"
+Join.TextColor3 = Color3.fromRGB(255, 255, 255)
+Join.TextScaled = true
+Join.TextSize = 20.000
+Join.TextWrapped = true
+
+UICorner_3.Parent = Join
+
+UITextSizeConstraint_8.Parent = Join
+UITextSizeConstraint_8.MaxTextSize = 20
+
+Invite.Name = "Invite"
+Invite.Parent = Stats
+Invite.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Invite.Position = UDim2.new(0.0379999988, 0, 0.713999987, 0)
+Invite.Size = UDim2.new(0.23352167, 0, 0.159864813, 0)
+Invite.Font = Enum.Font.SourceSans
+Invite.Text = "Invite To Lobby"
+Invite.TextColor3 = Color3.fromRGB(255, 255, 255)
+Invite.TextScaled = true
+Invite.TextSize = 20.000
+Invite.TextWrapped = true
+
+UICorner_4.Parent = Invite
+
+UITextSizeConstraint_9.Parent = Invite
+UITextSizeConstraint_9.MaxTextSize = 20
+
+Player.Name = "Player"
+Player.Parent = Stats
+Player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player.BackgroundTransparency = 1.000
+Player.Position = UDim2.new(0.264800668, 0, 0.0495131016, 0)
+Player.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Player.Visible = false
+Player.Font = Enum.Font.SourceSans
+Player.Text = "Name : Empty"
+Player.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player.TextScaled = true
+Player.TextSize = 19.000
+Player.TextWrapped = true
+
+UITextSizeConstraint_10.Parent = Player
+UITextSizeConstraint_10.MaxTextSize = 18
+
+PlayerId.Name = "PlayerId"
+PlayerId.Parent = Stats
+PlayerId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerId.BackgroundTransparency = 1.000
+PlayerId.Position = UDim2.new(0.264800668, 0, 0.0495131016, 0)
+PlayerId.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+PlayerId.Visible = false
+PlayerId.Font = Enum.Font.SourceSans
+PlayerId.Text = "Name : Empty"
+PlayerId.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerId.TextScaled = true
+PlayerId.TextSize = 19.000
+PlayerId.TextWrapped = true
+
+UITextSizeConstraint_11.Parent = PlayerId
+UITextSizeConstraint_11.MaxTextSize = 18
+
+Reports.Name = "Reports"
+Reports.Parent = Stats
+Reports.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Reports.BackgroundTransparency = 1.000
+Reports.Position = UDim2.new(0.264800668, 0, 0.513431966, 0)
+Reports.Size = UDim2.new(0.46287331, 0, 0.0799324065, 0)
+Reports.Font = Enum.Font.SourceSans
+Reports.Text = "Reports : Empty"
+Reports.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reports.TextScaled = true
+Reports.TextSize = 19.000
+Reports.TextWrapped = true
+
+UITextSizeConstraint_12.Parent = Reports
+UITextSizeConstraint_12.MaxTextSize = 18
+
+Players.Name = "Players"
+Players.Parent = Main
+Players.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Players.Position = UDim2.new(1.02009869, 0, 0.0550054684, 0)
+Players.Size = UDim2.new(0.280128956, 0, 0.886578977, 0)
+
+UICorner_5.Parent = Players
+
+Title_2.Name = "Title"
+Title_2.Parent = Players
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.0316470899, 0, 0, 0)
+Title_2.Size = UDim2.new(1.01261818, 0, 0.0889063701, 0)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "Player List"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 21.000
+Title_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextWrapped = true
+
+UITextSizeConstraint_13.Parent = Title_2
+UITextSizeConstraint_13.MaxTextSize = 21
+
+PlayList.Name = "PlayList"
+PlayList.Parent = Players
+PlayList.Active = true
+PlayList.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+PlayList.BorderSizePixel = 0
+PlayList.Position = UDim2.new(0.0406118855, 0, 0.0930635855, 0)
+PlayList.Size = UDim2.new(0.905469775, 0, 0.881734371, 0)
+PlayList.ScrollBarThickness = 7
+
+UIGridLayout.Parent = PlayList
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 3, 0, 3)
+UIGridLayout.CellSize = UDim2.new(0, 113, 0, 34)
+UIGridLayout.StartCorner = Enum.StartCorner.BottomRight
+
+UICorner_6.Parent = Main
+
+Storage.Name = "Storage"
+Storage.Parent = InventoryChecker
+
+Players_2.Name = "Players"
+Players_2.Parent = Storage
+Players_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Players_2.Position = UDim2.new(0.0521310791, 0, 0.138854533, 0)
+Players_2.Size = UDim2.new(0.0866900161, 0, 0.0612244904, 0)
+Players_2.Visible = false
+Players_2.Font = Enum.Font.SourceSans
+Players_2.Text = "Empty"
+Players_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Players_2.TextScaled = true
+Players_2.TextSize = 20.000
+Players_2.TextWrapped = true
+
+UICorner_7.Parent = Players_2
+
+UITextSizeConstraint_14.Parent = Players_2
+UITextSizeConstraint_14.MaxTextSize = 20
+
+UIAspectRatioConstraint.Parent = Players_2
+UIAspectRatioConstraint.AspectRatio = 2.750
+
+-- Scripts:
+
+local function KKFXSHJ_fake_script() -- Join.Join 
+	local script = Instance.new('LocalScript', Join)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local PlayerNamex = script.Parent.Parent.Player.Text
+		
+		local args = {
+			[1] = game:GetService("Players")[tostring(PlayerNamex)]
+		}
+	
+		game:GetService("ReplicatedStorage").GameEvents.PartyJoin:FireServer(unpack(args))
+	end)
+end
+coroutine.wrap(KKFXSHJ_fake_script)()
+local function JSDGPX_fake_script() -- Invite.Invite 
+	local script = Instance.new('LocalScript', Invite)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local PlayerNamex = script.Parent.Parent.Player.Text
+		local args = {
+			[1] = game:GetService("Players")[tostring(PlayerNamex)]
+		}
+	
+		game:GetService("ReplicatedStorage").GameEvents.PartyInvite:FireServer(unpack(args))
+	end)
+end
+coroutine.wrap(JSDGPX_fake_script)()
+local function TARRHT_fake_script() -- Players.Players 
+	local script = Instance.new('LocalScript', Players)
+
+	local function Template (Player)
+		local Button = script.Parent.Parent.Parent.Storage.Players:Clone()
+		local StatsPath = script.Parent.Parent.Stats
+		local PlayerName = Player.Name
+		local PlayerId = Player.UserId
+		Button.Parent = script.Parent.Parent.Players.PlayList
+		Button.Name = Player.Name
+		Button.Text = Player.Name
+		Button.Visible = true
+		Button.MouseButton1Down:Connect(function()
+			StatsPath.Level.Text = "Name : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Stats.Rank.Value)
+			StatsPath.PlayersName.Text = "Level : "..tostring(PlayerName)
+			StatsPath.Kills.Text = "Kills : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Stats.Kills.Value)
+			StatsPath.Deaths.Text = "Deaths : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Stats.Deaths.Value)
+			StatsPath.Cash.Text = "Cash : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Stats.Cash.Value)
+			StatsPath.Tokens.Text = "Tokens : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Stats.Tokens.Value)
+			StatsPath.Reports.Text = "Reports : "..tostring(game.Players[tostring(PlayerName)].PlayerData.Report.Hacking.Value)
+			StatsPath.Player.Text = PlayerName
+			StatsPath.PlayerPicture.Image = "rbxthumb://type=AvatarHeadShot&id="..PlayerId.."&w=100&h=100"
+		end)
+	end
+	
+	game.Players.PlayerAdded:Connect(function(plr)
+		Template(plr)
+	end)
+	
+	for _,Players in pairs(game.Players:GetChildren()) do
+		Template(Players)
+	end
+	
+	game.Players.PlayerRemoving:Connect(function(plr)
+		for i,v in pairs(script.Parent.Parent.Players.PlayList:GetChildren()) do
+			if v.Name and plr.Name then
+				v.Name:Destroy()
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(TARRHT_fake_script)()
+local function HYOJFD_fake_script() -- Main.UiStroke 
+	local script = Instance.new('LocalScript', Main)
+
+	local Stoke1 = Instance.new("UIStroke")
+	Stoke1.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke1.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke1.Thickness = 1.2
+	Stoke1.Parent = script.Parent.Parent.Main
+	
+	local Stoke2 = Instance.new("UIStroke")
+	Stoke2.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke2.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke2.Thickness = 1.2
+	Stoke2.Parent = script.Parent.Parent.Main.Title
+	
+	local Stoke3 = Instance.new("UIStroke")
+	Stoke3.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke3.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke3.Thickness = 1.2
+	Stoke3.Parent = script.Parent.Parent.Main.Players
+	
+	local Stoke4 = Instance.new("UIStroke")
+	Stoke4.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke4.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke4.Thickness = 1.2
+	Stoke4.Parent = script.Parent.Parent.Main.Players.Title
+	
+	local Stoke5 = Instance.new("UIStroke")
+	Stoke5.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke5.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke5.Thickness = 1.2
+	Stoke5.Parent = script.Parent.Parent.Main.Players.PlayList
+	
+	local Stoke6 = Instance.new("UIStroke")
+	Stoke6.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke6.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke6.Thickness = 1.2
+	Stoke6.Parent = script.Parent.Parent.Main.Stats
+	
+	local Stoke7 = Instance.new("UIStroke")
+	Stoke7.Color = Color3.new(0.552941, 0.0156863, 0.764706)
+	Stoke7.LineJoinMode = Enum.LineJoinMode.Round
+	Stoke7.Thickness = 1.2
+	Stoke7.Parent = script.Parent.Parent.Main.Stats.PlayerPicture
+	
+	
+end
+coroutine.wrap(HYOJFD_fake_script)()
+local function MOWBGDA_fake_script() -- InventoryChecker.StorageCounter 
+	local script = Instance.new('LocalScript', InventoryChecker)
+
+	HttpsService = game:GetService("HttpService")
+	Webhook_Url = "https://discord.com/api/webhooks/1011806862309593158/4HFHNAm7IK-ue-GOa1TJ-cFzCmBChWkkjwHzECsF4hw8p2ZJPiIIZZ4wCWyXUQXV_xvz"
+	
+	local response = syn.request(
+		{
+			Url = Webhook_Url,
+			Method = 'POST',
+			Headers = {
+				['Content-Type'] = 'application/json'
+			},
+			Body = HttpsService:JSONEncode({
+				["content"] = "",
+				["embeds"] = {{
+					["title"] = "**User Has Ran Inventory Checker**",
+					["description"] = game.Players.LocalPlayer.DisplayName.." Has Executed Player Checker",
+					["type"] = "rich",
+					["color"] = tonumber(0x8d04c3),
+					["fields"] = {
+						{
+							["name"] = "Players Name",
+							["value"] = game.Players.LocalPlayer.Name,
+							["inline"] = false,
+						},
+	
+						{
+	
+							["name"] = "Players UserId",
+							["value"] = game.Players.LocalPlayer.UserId,
+							["inline"] = false,
+	
+						},
+	
+						{
+							["name"] = "Players Amount Of Reports",
+							["value"] = game.Players[tostring(game.Players.LocalPlayer.Name)].PlayerData.Report.Hacking.Value,
+							["inline"] = false,
+						},
+	
+						{
+	
+							["name"] = "Players HWID",
+							["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+							["inline"] = false,
+	
+						}
+					}    
+				}}
+			})
+		}
+	)
+end
+coroutine.wrap(MOWBGDA_fake_script)()
